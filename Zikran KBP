@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+class Book
+{
+private:
+    int book_no;
+    string title;
+    float price;
+
+public:
+    void accept()
+    {
+        cout << "Enter Book Number: ";
+        cin >> book_no;
+
+        cin.ignore(); // Clear input buffer
+
+        cout << "Enter Book Title: ";
+        getline(cin, title);
+
+        cout << "Enter Book Price: ";
+        cin >> price;
+    }
+
+    void display()
+    {
+        cout << "\n--- Book Information ---" << endl;
+        cout << "Book Number : " << book_no << endl;
+        cout << "Book Title  : " << title << endl;
+        cout << "Book Price  : " << price << endl;
+    }
+};
+
+int main()
+{
+    Book b;
+
+    b.accept();
+    b.display();
+
+    return 0;
+}
+
+output :-
+
+Enter Book Number: 101
+Enter Book Title: C++ Programming
+Enter Book Price: 450
+
+--- Book Information ---
+Book Number : 101
+Book Title  : C++ Programming
+Book Price  : 450
+
+
